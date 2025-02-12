@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {Image, SafeAreaView, View} from 'react-native';
 
 export default function BackgroundWrapper({
   children,
@@ -7,9 +7,12 @@ export default function BackgroundWrapper({
   children: React.ReactNode;
 }) {
   return (
+      <View style={{flex:1}}>
+        <Image style={{flex: 1, width: '100%', height: '100%', position: 'absolute'}} source={require('../../assets/images/bg.png')}/>
     <SafeAreaView
-      style={{flex: 1, backgroundColor: '#0a0a0a', position: 'relative'}}>
+      style={{flex: 1, position: 'relative'}}>
       {children}
     </SafeAreaView>
+      </View>
   );
 }

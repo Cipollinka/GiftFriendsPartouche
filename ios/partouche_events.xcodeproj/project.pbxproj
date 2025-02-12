@@ -52,6 +52,7 @@
 		5B7EB9410499542E8C5724F5 /* Pods-partouche_events-partouche_eventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-partouche_events-partouche_eventsTests.debug.xcconfig"; path = "Target Support Files/Pods-partouche_events-partouche_eventsTests/Pods-partouche_events-partouche_eventsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-partouche_events.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-partouche_events.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9B76619ACD426DA81D3BDF /* DMSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DMSans-Regular.ttf"; path = "../src/assets/fonts/DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		6AD0F1C62D5CE38F00321236 /* partouche_events.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = partouche_events.entitlements; path = partouche_events/partouche_events.entitlements; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = partouche_events/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-partouche_events-partouche_eventsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-partouche_events-partouche_eventsTests.release.xcconfig"; path = "Target Support Files/Pods-partouche_events-partouche_eventsTests/Pods-partouche_events-partouche_eventsTests.release.xcconfig"; sourceTree = "<group>"; };
 		91832EE3EDE046D68AE9A3CA /* DMSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DMSans-Bold.ttf"; path = "../src/assets/fonts/DMSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		13B07FAE1A68108700A75B9A /* partouche_events */ = {
 			isa = PBXGroup;
 			children = (
+				6AD0F1C62D5CE38F00321236 /* partouche_events.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -501,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = partouche_events/partouche_events.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = partouche_events/Info.plist;
@@ -509,7 +512,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -529,6 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = partouche_events/partouche_events.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = partouche_events/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -536,7 +540,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

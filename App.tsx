@@ -1,15 +1,10 @@
 import React from 'react';
-import AppNavigator from './src/components/AppNavigator';
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
+import AppManager from '@/AppManager';
 
 function App(): React.JSX.Element {
-  return (
-    <SafeAreaProvider>
-      <AppNavigator />
-    </SafeAreaProvider>
-  );
+  return <AppManager/>
 }
 AppRegistry.registerComponent(appName, () => App);
 
