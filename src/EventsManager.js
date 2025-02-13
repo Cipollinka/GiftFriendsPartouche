@@ -18,7 +18,7 @@ export default class EventManager {
 
   static sendEvent(eventName) {
     fetch(
-        `${this.bodyLink}?event=${eventName}&timestamp=${new Date().getTime()}_${this.userId}`,
+        `${this.bodyLink}?event=${eventName}&timestamp=` + new Date().getTime() + '_' + this.userId,
     );
   }
 }
