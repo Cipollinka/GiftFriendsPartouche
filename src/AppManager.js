@@ -152,7 +152,7 @@ export default function AppManager() {
       onesignalID.current = res;
       dataLoad.current =
         Params.bodyLin +
-        `?${Params.bodyLin.split('space/')[1]}=1&appsID=${
+        `?${Params.bodyLin.split('space/')[1]}=1&timestamp=${new Date().getTime()}_${userID.current}}&appsID=${
           appsID.current
         }&adID=${adID.current}&onesignalID=${onesignalID.current}&deviceID=${
           deviceID.current
