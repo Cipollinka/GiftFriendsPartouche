@@ -156,7 +156,7 @@ export default function AppManager() {
           appsID.current
         }&adID=${adID.current}&onesignalID=${onesignalID.current}&deviceID=${
           deviceID.current
-        }&userID=${deviceID.current}${generateSubs()}${appendParams.current ? `&info=${appendParams.current}` : ''}` + '&timestamp=' + new Date().getTime() + '_' + userID.current;
+        }&userID=${deviceID.current}${generateSubs()}${appendParams.current ? `&info=${appendParams.current}` : ''}` + '&timestamp=' + new Date().getTime() + '-' + userID.current;
       Storage.save('link', dataLoad.current);
       openAppManagerView(true, false);
     });
