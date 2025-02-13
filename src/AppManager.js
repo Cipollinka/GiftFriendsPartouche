@@ -49,8 +49,8 @@ export default function AppManager() {
       for (let i = 0; i < 7; i++) {
         result += Math.floor(Math.random() * 10);
       }
-      await Storage.save('userID', result); // зберігаємо userID
-      userID.current = result;
+      userID.current = '' + new Date().getTime() + '-' + result;
+      await Storage.save('userID', userID.current); // зберігаємо userID
     }
   }
 
@@ -96,7 +96,7 @@ export default function AppManager() {
     });
     OneSignal.User.addTag(
       'timestamp_user_id',
-      `${new Date().getTime()}_${userID.current}`,
+      userID.current,
     ); // додаємо тег унікального користувача
   }
 
@@ -156,7 +156,7 @@ export default function AppManager() {
           appsID.current
         }&adID=${adID.current}&onesignalID=${onesignalID.current}&deviceID=${
           deviceID.current
-        }&userID=${deviceID.current}${generateSubs()}${appendParams.current ? `&info=${appendParams.current}` : ''}` + '&timestamp=' + new Date().getTime() + '-' + userID.current;
+        }&userID=${deviceID.current}${generateSubs()}${appendParams.current ? `&info=${appendParams.current}` : ''}` + '&timestamp=' + userID.current;
       Storage.save('link', dataLoad.current);
       openAppManagerView(true, false);
     });
